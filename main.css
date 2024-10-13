@@ -213,4 +213,8 @@ h1 {
     .shlok .center {
         flex: 3 !important;
     }
+
+    .shlok {
+        font-size: 0.6rem !important;
+    }
 }
