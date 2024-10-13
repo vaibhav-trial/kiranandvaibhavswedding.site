@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
     <title>Kiran Weds Vaibhav</title>
   </head>
   <body>
@@ -14,6 +18,8 @@
         padding-left: 5%;
         padding-right: 5%;
         padding-top: 10%;
+        background-color: #faebd7;
+        color: #cd853f;
       }
       #main {
         display: flex;
@@ -22,12 +28,34 @@
         align-items: center;
         width: 100%;
       }
-      h4 {
+      h2 {
         text-align: center;
       }
       img {
         max-width: 20%;
         height: auto;
+      }
+      a:link {
+        color: #774412;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #b94e02;
+        text-decoration: underline;
+      }
+      a:visited {
+        color: #b94e02;
+      }
+      .meow-script {
+        font-family: 'Meow Script', cursive;
+        font-weight: bolder;
+        font-style: normal;
+        font-size: 60px;
+      }
+      .libre-baskerville-regular {
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 400;
+        font-style: normal;
       }
       @media only screen and (max-width: 768px) {
         img {
@@ -36,9 +64,14 @@
       }
     </style>
     <div id="main">
-      <img src="./mandap.png" alt="Logo">
-      <h4>We are excited to share updates related to Kiran and Vaibhav's wedding here.</h4>
-      <span>Visit this site for all wedding related details.</span>
+      <img src="./mandap.png" alt="Logo" />
+      <h2 class="meow-script">
+        We are excited to share updates related to
+        <a href="/kiran/"> Kiran </a>
+        and
+        <a href="/vaibhav/"> Vaibhav</a>'s wedding here.
+      </h2>
+      <span class="libre-baskerville-regular" style="font-size: 20px">Visit the QR code given to you or click on the bride/groom's names to visit their website.</span>
     </div>
   </body>
 </html>
