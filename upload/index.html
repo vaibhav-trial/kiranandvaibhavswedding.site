@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload your songs for Kiran and Vaibhav's Sangeet</title>
+  </head>
+  <body>
+    <script defer src="./app.js"></script>
+    <div class="container">
+      <div id="login-form-container">
+        <h3>Log in to upload your songs for Kiran and Vaibhav's Sangeet</h3>
+        <form id="login-form">
+          <label for="username">Enter your first name, no spaces or special characters</label>
+          <input placeholder="Username" type="text" id="username" name="username" />
+          <label for="password">Enter the password that was given to you</label>
+          <input placeholder="Password" type="password" id="password" name="password" />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+      <div id="file-upload-container" class="hidden">
+        <h3>Upload your song</h3>
+        <p>Only .mp3 and .wav files are allowed</p>
+        <div id="loader">
+          <span id="loader-spinner"></span>
+        </div>
+        <form id="file-upload-form">
+          <label for="file-upload">Select your song file (max limit: 10mb)</label>
+          <input type="file" id="file-upload" name="file-upload" accept=".mp3, .wav" />
+          <button type="submit" disabled>Upload</button>
+        </form>
+      </div>
+    </div>
+    <style>
+      body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      #login-form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #000;
+        border-radius: 5px;
+      }
+      #login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #577bea;
+        border-radius: 5px;
+      }
+
+      #login-form input {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #577bea;
+        border-radius: 5px;
+      }
+
+      #login-form button {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #577bea;
+        border-radius: 5px;
+        background-color: #577bea;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      #file-upload-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #000;
+        border-radius: 5px;
+      }
+
+      #file-upload-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #000;
+        border-radius: 5px;
+      }
+
+      #file-upload {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #577bea;
+        border-radius: 5px;
+      }
+
+      #file-upload-form button {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #577bea;
+        border-radius: 5px;
+        background-color: #577bea;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      #file-upload-form button:disabled {
+        background-color: #ccc;
+        color: #000;
+        cursor: not-allowed;
+        border: 1px solid #f34b4b;
+        color: #f34b4b;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      #loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+        border-radius: 5px;
+      }
+
+      #loader-spinner {
+        display: none;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #577bea;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s ease-in-out infinite;
+      }
+
+      #loader-spinner.show {
+        display: flex;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </body>
+</html>
