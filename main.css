@@ -185,6 +185,75 @@ h1 {
     }
 }
 
+#prewedding-map {
+    display: none;
+    padding: 20px 10px;
+}
+
+#prewedding-map.show {
+    display: flex;
+}
+
+#prewedding-map button {
+    display: flex;
+    border: 2px solid #cd853f;
+    background: #faebd7;
+    border-radius: 20px;
+    height: 40px;
+    align-items: center;
+    color: #cd853f;
+    font-weight: bolder;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh 10vw;
+    background: #937e61;
+    color: #faebd7;
+    opacity: 0.8;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 20px 10px;
+    background: #cd853f;
+    border-radius: 50%;
+}
+
+.modal .google-map {
+    width: calc(100% - 40px) !important;
+}
+
+.pb-8 {
+    padding-bottom: 8px;
+}
+
+.modal-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
 @media screen and (max-width: 410px) {
     h1 {
         font-size: 30px !important;
