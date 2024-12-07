@@ -16,11 +16,19 @@ loginForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   const totalUploadSize = localStorage.getItem('totalUploadSize') || 0;
   if (parseInt(totalUploadSize) > MAX_ALLOWED_UPLOAD_LIMIT) {
-    alert('You have uploaded more than 100 MB of data. You can\'t log in now.');
+    alert("You have uploaded more than 100 MB of data. You can't log in now.");
     return logout();
   }
-  const username = event.target.username.value,
+  const unsanitizedUsername = event.target.username.value;
+  const username = unsanitizedUsername.replace(/[^a-zA-Z]/g, '_'),
     password = event.target.password.value;
+  if (username !== unsanitizedUsername) {
+    alert(`You entered an invalid character in the username. The username has been changed to ${username}.`);
+  }
+  if (!username || !password) {
+    alert('Username and password are required.');
+    return;
+  }
   const payload = {
     purpose: 'auth',
     data: {
